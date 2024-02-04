@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #01021E;
+	font-family: "Inter", sans-serif;
+}
+
+.img-full {
+	@apply w-full h-full object-cover
+}
+
+.header-bg {
+	@apply w-full h-full absolute bg-cover bg-center will-change-auto pointer-events-none
+}
+
+.header-title {
+	font-size: calc(var(--index) * 5);
+	letter-spacing: calc(var(--index) / 2);
+	margin-top: calc(var(--index) * 4);
+}
+
+.header-shadow {
+	@apply before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradientShadowHeader;
+}

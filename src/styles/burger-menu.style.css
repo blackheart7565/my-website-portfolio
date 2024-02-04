@@ -1,0 +1,43 @@
+/*  */
+
+.burger-btn {
+	@apply w-[35px] h-[35px] rounded-[50%] relative
+}
+
+.burger-btn>span {
+	@apply absolute top-[50%] left-[50%] h-[2px] bg-white cursor-pointer;
+	width: calc(100% - 16px);
+	transform: translate(-50%, -50%);
+}
+
+.burger-btn>span::before,
+.burger-btn>span::after {
+	content: "";
+	@apply w-full h-full bg-white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+}
+
+.burger-btn>span::before {
+	margin-top: -5px;
+}
+
+.burger-btn>span::after {
+	margin-top: 5px;
+}
+
+.burger-btn.active>span {
+	@apply bg-transparent
+}
+
+.burger-btn.active>span:before {
+	transform: rotate(45deg);
+	margin-top: 0;
+}
+
+.burger-btn.active>span::after {
+	transform: rotate(-45deg);
+	margin-top: 0;
+}

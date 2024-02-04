@@ -1,0 +1,18 @@
+.nav-item {}
+
+.nav-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #213FA2;
+	border-radius: 8px;
+	transform: scale(0);
+	transition: transform 0.2s ease-in-out;
+
+	@apply w-full h-full z-[-1]
+}
+
+.nav-item:hover::before {
+	transform: scale(1);
+}
