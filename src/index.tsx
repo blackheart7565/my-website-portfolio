@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouters from "./components/AppRouters";
 
 import './styles/index.scss';
+import "./styles/scroll.style.scss";
 import './styles/nav.style.css';
 import './styles/burger-menu.style.css';
 

@@ -45,11 +45,13 @@ const NavBar: React.FC<INavBar> = () => {
 					<Logo />
 					<span
 						className="
-							text-2xl lg:text-3xl text-[#89CFF2] uppercase
+							text-2xl 
+							lg:text-3xl 
+							text-[#89CFF2]
 							font-bold
 						"
 					>
-						Portfolio
+						Port<span className="text-[#E650C5]">folio</span>
 					</span>
 				</Link>
 

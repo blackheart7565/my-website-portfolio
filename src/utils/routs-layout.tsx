@@ -21,11 +21,11 @@ export const routesLayout: IRoutesLayout[] = [
 				index: true,
 				path: "",
 				element: <Portfolio />,
+			}, {
+				id: 2,
+				path: "/*",
+				element: <PageNotFound />
 			}
 		]
-	}, {
-		id: 2,
-		path: "/*",
-		element: <PageNotFound />
 	}
 ]

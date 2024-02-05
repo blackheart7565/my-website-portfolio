@@ -1,18 +1,14 @@
 import React from 'react';
+import AboutMe from "../model/AboutMe";
+import Header from "../model/Header";
 
 interface IPortfolio { }
 
 const Portfolio: React.FC<IPortfolio> = () => {
 	return (
 		<>
-			<div
-				className="h-screen w-full bg-cover"
-				style={{
-					// backgroundImage: "url(img/middle.jpg)"
-				}}
-			>
-
-			</div>
+			<Header />
+			<AboutMe />
 		</>
 	);
 };

@@ -24,6 +24,9 @@ body,
 body {
 	background: #01021E;
 	font-family: "Inter", sans-serif;
+	color: #fff;
+	font-weight: 400;
+	line-height: 1;
 }
 
 .img-full {
@@ -34,10 +37,24 @@ body {
 	@apply w-full h-full absolute bg-cover bg-center will-change-auto pointer-events-none
 }
 
-.header-title {
-	font-size: calc(var(--index) * 5);
-	letter-spacing: calc(var(--index) / 2);
+.header-section-titles {
 	margin-top: calc(var(--index) * 4);
+	line-height: calc(var(--index) * 2.6);
+}
+
+.header-title {
+	font-size: calc(var(--index) * 3.5);
+	letter-spacing: calc(var(--index) / 10);
+}
+
+.header-subtext {
+	font-size: calc(var(--index) * 1.5);
+	letter-spacing: calc(var(--index) / 20);
+}
+
+.header-caption {
+	font-size: calc(var(--index) * 1.2);
+	letter-spacing: calc(var(--index) / 15);
 }
 
 .header-shadow {

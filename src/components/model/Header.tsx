@@ -15,7 +15,7 @@ const Header = () => {
 	const headerTitleY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
 	return (
-		<header
+		<div
 			className="relative"
 		>
 			<div
@@ -26,19 +26,49 @@ const Header = () => {
 				"
 			>
 				<motion.div
-					className="
-						header-title
-						inline-flex
-						font-black uppercase z-[1] 
-						bg-gradientHeaderTitle 
-						bg-clip-text
-						text-transparent
+					className="	
+						header-section-titles
+						z-[1] 
 					"
 					style={{
 						y: headerTitleY,
 					}}
 				>
-					Parallax
+					<div
+						className="
+							header-caption
+							text-[#e1e1e1]
+							font-bold
+						"
+					>
+						Hello,
+						<span
+							className="
+								text-[#0E1D42]
+							"
+						> my name is</span>
+					</div>
+					<div
+						className="
+							header-title
+							uppercase
+							font-black
+							bg-gradientHeaderTitle
+							bg-clip-text
+							text-transparent
+						"
+					>
+						Vitaly Lavrov
+					</div>
+					<div
+						className="
+							header-subtext
+							text-[#e1e1e1]
+							font-bold
+						"
+					>
+						I'am a Web Developer
+					</div>
 				</motion.div>
 
 				<motion.div
@@ -56,7 +86,7 @@ const Header = () => {
 				/>
 
 			</div>
-		</header>
+		</div>
 	);
 };
 
