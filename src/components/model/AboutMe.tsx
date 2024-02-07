@@ -5,7 +5,7 @@ const AboutMe = () => {
 	const aboutMeRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({
 		target: aboutMeRef,
-		offset: ["start end", "end end"],
+		offset: ["start end", "start start"]
 	});
 	const transformLeftX = useTransform(scrollYProgress, [0, 1], ["-50%", "0%"]);
 	const transformLeftY = useTransform(scrollYProgress, [0, 1], ["50%", "0%"]);
@@ -76,7 +76,6 @@ const AboutMe = () => {
 					bg-cover
 				"
 				style={{
-					// backgroundImage: "url(/img/about-me.png)",
 					x: transformRightX,
 					y: transformRightY,
 				}}

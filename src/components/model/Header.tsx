@@ -1,14 +1,15 @@
 import {
 	motion,
-	useScroll, useTransform
+	useScroll,
+	useTransform
 } from "framer-motion";
 import { useRef } from "react";
 
 
 const Header = () => {
-	const ref = useRef<HTMLElement>(null);
+	const headerParallaxRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({
-		target: ref,
+		target: headerParallaxRef,
 		offset: ["start start", "end start"]
 	});
 	const backgroundBaseY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
@@ -19,6 +20,7 @@ const Header = () => {
 			className="relative"
 		>
 			<div
+				ref={headerParallaxRef}
 				className="
 					h-screen 
 					flex justify-center items-center text-center 
@@ -26,9 +28,9 @@ const Header = () => {
 				"
 			>
 				<motion.div
-					className="	
+					className="
 						header-section-titles
-						z-[1] 
+						z-[1]
 					"
 					style={{
 						y: headerTitleY,
@@ -86,7 +88,7 @@ const Header = () => {
 				/>
 
 			</div>
-		</div>
+		</div >
 	);
 };
 
