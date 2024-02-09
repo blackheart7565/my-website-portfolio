@@ -6,12 +6,16 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			gridTemplateColumns: {
+				skillsColum: "repeat(auto-fit, minmax(150px, 1fr))",
+			},
 			colors: {
 				"blue-1000": "#0A1437",
 				"blue-1100": "#051A4C",
 			},
 			boxShadow: {
 				burgerMenuBtn: "inset 0px 0px 5px  rgba(1, 2, 30, 1)",
+				skillSection: "0px 0px 10px #00D0DC, 0px 0px 20px #00D0DC, inset 0px 0px 10px #00D0DC, inset 0px 0px 20px #00D0DC",
 			},
 		},
 		backgroundImage: {
